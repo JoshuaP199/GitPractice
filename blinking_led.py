@@ -11,7 +11,7 @@ try:
         
     GPIO.setup(RED, GPIO.OUT, initial = GPIO.LOW)
     GPIO.setup(GREEN, GPIO.OUT, initial = GPIO.LOW)
-    GPIO.setup(YELLOW, GPIO.OUT, initial = GPIO.HIGH)
+    GPIO.setup(YELLOW, GPIO.OUT, initial = GPIO.LOW)
 
     def led_on(color):
         GPIO.output(color, GPIO.HIGH)
@@ -32,8 +32,7 @@ try:
         GPIO.output(GREEN, GPIO.LOW)
         sleep(1)
 
-    GPIO.output(YELLOW, GPIO.LOW)
-    sleep(5)
+    #sleep(5)
 
         
     while True:
@@ -44,6 +43,6 @@ try:
         led_off(GREEN)
         pauseTicker(15)
 except KeyboardInterrupt:
-    print("Stopped")
+    print("\nStopped")
 finally:
     GPIO.cleanup()
