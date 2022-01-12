@@ -11,7 +11,12 @@ try:
         
     GPIO.setup(RED, GPIO.OUT, initial = GPIO.LOW)
     GPIO.setup(GREEN, GPIO.OUT, initial = GPIO.LOW)
-    GPIO.setup(YELLOW, GPIO.OUT, initial = GPIO.LOW)
+    GPIO.setup(YELLOW, GPIO.OUT, initial = GPIOi.LOW)
+    
+    ''' Try this next time its all plugged in
+    def led_action(color,power)
+        GPIO.output(color, GPIO.power)
+    '''
 
     def led_on(color):
         GPIO.output(color, GPIO.HIGH)
